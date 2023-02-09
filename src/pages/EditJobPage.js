@@ -8,7 +8,7 @@ export const EditJobPage = ({ jobToEdit }) => {
     const [date, setDate] = useState(jobToEdit.date);
     const [status, setStatus] = useState(jobToEdit.status);
     const [skill, setSkill] = useState(jobToEdit.skill);
-    const [contact, setContact] = useState('');
+    const [contact, setContact] = useState(jobToEdit.contact);
 
     const history = useHistory();
 

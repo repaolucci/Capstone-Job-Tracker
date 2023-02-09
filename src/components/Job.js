@@ -8,7 +8,7 @@ function Job({ job, onDelete, onEdit }) {
             <td>{job.title}</td>
             <td>{job.date}</td>
             <td>{job.status}</td>
-            <td>{job.skills}</td>
+            <td>{job.skill}</td>
             <td>{job.contact}</td>
             <td>< MdEdit onClick={() => onEdit(job)}/></td>
             <td>< MdDeleteForever onClick={() => onDelete(job._id)}/></td>

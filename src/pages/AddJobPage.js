@@ -38,7 +38,7 @@ export const AddJobPage = () => {
                 value={company}
                 onChange={e => setCompany(e.target.value)} />
             <input
-                type="number"
+                type="text"
                 value={title}
                 placeholder="Enter title here"
                 onChange={e => setTitle(e.target.value)} />
