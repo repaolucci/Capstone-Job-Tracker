@@ -35,7 +35,7 @@ function HomePage({ setJobToEdit }) {
 
     return (
         <>
-            <h2>List of Jobs</h2>
+            <h2>Job Tracker</h2>
             <JobList jobs={jobs} onDelete={onDelete} onEdit={onEdit}></JobList>
             <Link to="/add-job">Add a job</Link>
         </>
