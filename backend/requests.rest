@@ -1,0 +1,40 @@
+// Test Retreive Jobs
+GET http://localhost:3000/jobs
+
+###
+
+// Test Create Job
+POST http://localhost:3000/jobs
+Content-Type: application/json
+
+{
+    "title": "Full Stack",
+    "companyName": "Amazon",
+    "jobType": "Full-time",
+    "location": "Seattle, WA",
+    "locationType": "On-site",
+    "dateApplied": "02/13/2023",
+    "skills": [
+      "CSS",
+      "HTML"
+    ],
+    "status": "Applied",
+    "contacts": []
+  }
+
+###
+
+// Test Update Job 
+PUT http://localhost:3000/jobs/63e3f92ec52cd282af45c802
+Content-Type: application/json
+
+{
+  "title": "Software Engineer 2"
+}
+
+
+###
+
+// Test Delete Job
+DELETE http://localhost:3000/jobs/63eab10ff17e8f49edc41551
+Content-Type: application/json
