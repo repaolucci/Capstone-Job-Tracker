@@ -59,7 +59,7 @@ const updateJob = async (_id,
                         skills, 
                         contacts) => {
     
-    const result = await Job.Resolution.updateOne(
+    const result = await Job.updateOne(
                         { _id: _id },
                         { title: title, 
                             companyName: companyName, 
