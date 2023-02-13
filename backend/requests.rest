@@ -1,0 +1,29 @@
+// Test Retreive Jobs
+GET http://localhost:3000/jobs
+
+###
+
+// Test Create Job
+POST http://localhost:3000/jobs
+Content-Type: application/json
+
+{
+    "title": "Full Stack",
+    "companyName": "Amazon",
+    "jobType": "Full-time",
+    "location": "Seattle, WA",
+    "locationType": "On-site",
+    "dateApplied": "02/13/2023",
+    "skills": [
+      "CSS",
+      "HTML"
+    ],
+    "status": "Applied",
+    "contacts": []
+  }
+
+###
+
+GET http://localhost:3000/
+
+###
