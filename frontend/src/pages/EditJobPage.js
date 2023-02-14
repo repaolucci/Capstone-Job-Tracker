@@ -3,17 +3,17 @@ import { useHistory } from "react-router-dom";
 
 export const EditJobPage = ({ jobToEdit }) => {
 
-    const [company, setCompany] = useState(jobToEdit.company);
+    const [companyName, setCompany] = useState(jobToEdit.company);
     const [title, setTitle] = useState(jobToEdit.title);
-    const [date, setDate] = useState(jobToEdit.date);
+    const [dateApplied, setDate] = useState(jobToEdit.date);
     const [status, setStatus] = useState(jobToEdit.status);
-    const [skill, setSkill] = useState(jobToEdit.skill);
-    const [contact, setContact] = useState(jobToEdit.contact);
+    const [skills, setSkill] = useState(jobToEdit.skill);
+    const [contacts, setContact] = useState(jobToEdit.contact);
 
     const history = useHistory();
 
     const editJob = async () => {
-        const editedJob = { company, title, date, status, skill, contact };
+        const editedJob = { companyName, title, dateApplied, status, skills, contacts };
         const response = await fetch(`/jobs/${jobToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify(editedJob),
@@ -34,7 +34,7 @@ export const EditJobPage = ({ jobToEdit }) => {
             <h1>Edit Job</h1>
             <input
                 type="text"
-                value={company}
+                value={companyName}
                 onChange={e => setCompany(e.target.value)} />
             <input
                 type="text"
@@ -43,7 +43,7 @@ export const EditJobPage = ({ jobToEdit }) => {
             <input
                 type="text"
                 placeholder="Enter date here"
-                value={date}
+                value={dateApplied}
                 onChange={e => setDate(e.target.value)} />
             <input
                 type="text"
@@ -53,12 +53,12 @@ export const EditJobPage = ({ jobToEdit }) => {
             <input
                 type="text"
                 placeholder="Enter skill here"
-                value={skill}
+                value={skills}
                 onChange={e => setSkill(e.target.value)} />
             <input
                 type="text"
                 placeholder="Enter contact here"
-                value={contact}
+                value={contacts}
                 onChange={e => setContact(e.target.value)} />
             <button
                 onClick={editJob}

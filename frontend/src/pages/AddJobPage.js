@@ -3,17 +3,17 @@ import { useHistory } from "react-router-dom";
 
 export const AddJobPage = () => {
 
-    const [company, setCompany] = useState('');
+    const [companyName, setCompany] = useState('');
     const [title, setTitle] = useState('');
-    const [date, setDate] = useState('');
+    const [dateApplied, setDate] = useState('');
     const [status, setStatus] = useState('');
-    const [skill, setSkill] = useState('');
-    const [contact, setContact] = useState('');
+    const [skills, setSkill] = useState('');
+    const [contacts, setContact] = useState('');
 
     const history = useHistory();
 
     const addJob = async () => {
-        const newJob = { company, title, date, status, skill, contact };
+        const newJob = { companyName, title, dateApplied, status, skills, contacts };
         const response = await fetch('/jobs', {
             method: 'POST',
             body: JSON.stringify(newJob),
@@ -35,7 +35,7 @@ export const AddJobPage = () => {
             <input
                 type="text"
                 placeholder="Enter company here"
-                value={company}
+                value={companyName}
                 onChange={e => setCompany(e.target.value)} />
             <input
                 type="text"
@@ -45,7 +45,7 @@ export const AddJobPage = () => {
             <input
                 type="text"
                 placeholder="Enter date here"
-                value={date}
+                value={dateApplied}
                 onChange={e => setDate(e.target.value)} />
             <input
                 type="text"
@@ -55,12 +55,12 @@ export const AddJobPage = () => {
             <input
                 type="text"
                 placeholder="Enter skill here"
-                value={skill}
+                value={skills}
                 onChange={e => setSkill(e.target.value)} />
             <input
                 type="text"
                 placeholder="Enter contact here"
-                value={contact}
+                value={contacts}
                 onChange={e => setContact(e.target.value)} />
             <button
                 onClick={addJob}
