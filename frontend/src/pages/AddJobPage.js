@@ -3,8 +3,11 @@ import { useHistory } from "react-router-dom";
 
 export const AddJobPage = () => {
 
-    const [companyName, setCompany] = useState('');
     const [title, setTitle] = useState('');
+    const [companyName, setCompany] = useState('');
+    const [jobType, setJobType] = useState('');
+    const [location, setLocation] = useState('');
+    const [locationType, setLocationType] = useState('');
     const [dateApplied, setDate] = useState('');
     const [status, setStatus] = useState('');
     const [skills, setSkill] = useState('');
@@ -13,7 +16,7 @@ export const AddJobPage = () => {
     const history = useHistory();
 
     const addJob = async () => {
-        const newJob = { companyName, title, dateApplied, status, skills, contacts };
+        const newJob = { title, companyName, jobType, location, locationType, dateApplied, status, skills, contacts };
         const response = await fetch('/jobs', {
             method: 'POST',
             body: JSON.stringify(newJob),
@@ -34,14 +37,29 @@ export const AddJobPage = () => {
             <h1>Add Job</h1>
             <input
                 type="text"
+                value={title}
+                placeholder="Enter title here"
+                onChange={e => setTitle(e.target.value)} />
+            <input
+                type="text"
                 placeholder="Enter company here"
                 value={companyName}
                 onChange={e => setCompany(e.target.value)} />
             <input
                 type="text"
-                value={title}
-                placeholder="Enter title here"
-                onChange={e => setTitle(e.target.value)} />
+                placeholder="Enter job type here"
+                value={jobType}
+                onChange={e => setJobType(e.target.value)} />
+            <input
+                type="text"
+                placeholder="Enter location here"
+                value={location}
+                onChange={e => setLocation(e.target.value)} />
+            <input
+                type="text"
+                placeholder="Enter location type here"
+                value={locationType}
+                onChange={e => setLocationType(e.target.value)} />            
             <input
                 type="text"
                 placeholder="Enter date here"

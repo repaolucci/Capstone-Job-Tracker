@@ -6,12 +6,15 @@ function JobList({ jobs, onDelete, onEdit }) {
         <table id="jobs">
             <thead>
                 <tr>
-                    <th>Company</th>
                     <th>Title</th>
-                    <th>Application Date (MM-DD-YY)</th>
+                    <th>Company</th>
+                    <th>Job Type</th>
+                    <th>Location</th>
+                    <th>Location Type</th>
+                    <th>Application Date (MM/DD/YY)</th>
                     <th>Status</th>
                     <th>Skills Required</th>
-                    <th>Contact</th>
+                    <th>Related Contacts</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
