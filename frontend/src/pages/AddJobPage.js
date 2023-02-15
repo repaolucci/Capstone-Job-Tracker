@@ -29,7 +29,7 @@ export const AddJobPage = () => {
         } else{
             alert(`Failed to add job, status code = ${response.status}`);
         }
-        history.push("/");
+        history.push("/view-page");
     };
 
     return (
