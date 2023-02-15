@@ -29,7 +29,7 @@ export const EditJobPage = ({ jobToEdit }) => {
         } else{
             alert(`Failed to edit job, status code = ${response.status}`);
         }
-        history.push("/");
+        history.push("/view-page");
     };
 
     return (
