@@ -5,6 +5,7 @@ import HomePage from './pages/Homepage';
 import AddJobPage from './pages/AddJobPage';
 import EditJobPage from './pages/EditJobPage';
 import { useState} from 'react';
+import Log_in from './pages/LoginPage';
 
 function App() {
   const [jobToEdit, setJobToEdit] = useState();
@@ -15,6 +16,9 @@ function App() {
       <Router>
         <div className="App-header">
           <Route path="/" exact>
+            <Log_in />
+          </Route>
+          <Route path="/view-page">
             <HomePage setJobToEdit={setJobToEdit} />
           </Route>
           <Route path="/add-job">
