@@ -2,6 +2,7 @@ import '../App.css';
 import {Login} from "./Login"
 import { Register } from './Register';
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 
 function Log_in() {
   const [currentForm, setCurrentForm] = useState("login");
