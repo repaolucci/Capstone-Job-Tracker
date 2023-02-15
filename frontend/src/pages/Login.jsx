@@ -5,14 +5,16 @@ export const Login = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     let history = useHistory();
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
         console.log(pass);
-        if (email && pass){
+        if (email === 'jake@aol.com' && pass=== '1234'){
             console.log('not empty');  
             history.push("/view-page")
+        } else {
+            alert('credentials not recognized');
         }
     }
    
