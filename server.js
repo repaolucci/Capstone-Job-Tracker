@@ -1,9 +1,9 @@
 // Imports
-const db = require ('./connection.js')
+const db = require ('./backend/connection.js')
 const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config()
-const jobRoutes = require('./routes/jobRoute');
+const jobRoutes = require('./backend/routes/jobRoute');
 
 
 // Constants

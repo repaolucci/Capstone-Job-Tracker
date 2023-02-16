@@ -17,4 +17,4 @@ db.once('open', () => {
      console.log('Successfully connected to MongoDB using Mongoose!');
  });
 
-module.exports = { db }; 
+module.exports = { db };
