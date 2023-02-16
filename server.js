@@ -4,6 +4,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config()
 const jobRoutes = require('./routes/jobRoute');
+const path = require('path');
 
 
 // Constants
