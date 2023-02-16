@@ -4,6 +4,10 @@ body {
 
 .App {
   text-align: center;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-header {
@@ -33,6 +37,53 @@ th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #9068b6;
   color: white;
+}
+
+.fixed-top {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-form-container, .login-form, .register-form{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px){
+  .auth-form-container{
+    padding: 3rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+}
+
+
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+}
+
+button {
+  border: none;
+  background-color: gray;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer
+
+}
+
+.link-btn {
+  background: none;
+  color: black;
+  text-decoration: underline;
 }
