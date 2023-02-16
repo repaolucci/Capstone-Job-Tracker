@@ -15,9 +15,9 @@ function App() {
     <div className="App">
       <Router>
         <div className="App-header">
-          <Route path="/" exact>
-            <Log_in />
-          </Route>
+
+
+
           <Route path="/view-page">
             <HomePage setJobToEdit={setJobToEdit} />
           </Route>
@@ -27,6 +27,12 @@ function App() {
           <Route path="/edit-job">
             <EditJobPage jobToEdit={jobToEdit} />
           </Route>
+
+          <Route path="/" exact>
+            <Log_in />
+          </Route>
+
+
           </div>
       </Router>
     </div>
