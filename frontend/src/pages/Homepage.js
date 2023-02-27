@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import JobList from '../components/JobList';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import AddJobPage from './AddJobPage';
+import AddJob from '../components/Modal/AddJob';
 
 function HomePage({ setJobToEdit }) {
     const [jobs, setJobs] = useState([]);
@@ -40,7 +40,7 @@ function HomePage({ setJobToEdit }) {
             <h2>Job Tracker</h2>
             <JobList jobs={jobs} onDelete={onDelete} onEdit={onEdit}></JobList>
             <button onClick={() => setIsOpen(true)}>Open Modal</button>
-            {isOpen && <AddJobPage setIsOpen={setIsOpen} />}
+            {isOpen && <AddJob setIsOpen={setIsOpen} />}
             <Link to="/add-job">Add a job</Link>
         </>
     );

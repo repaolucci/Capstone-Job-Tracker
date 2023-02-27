@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./pages/Homepage";
-import AddJobPage from "./pages/AddJobPage";
+import AddJob from "./components/Modal/AddJob";
 import EditJobPage from "./pages/EditJobPage";
 import SkillsPage from "./pages/SkillsPage";
 import { useState } from "react";
@@ -27,7 +27,7 @@ function App() {
             <div className="navbar-custom">
               <NavBar />
             </div>
-            <AddJobPage />
+            <AddJob />
           </Route>
           <Route path="/edit-job">
             <div className="navbar-custom">
