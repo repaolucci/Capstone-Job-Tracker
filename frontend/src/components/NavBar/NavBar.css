@@ -1,0 +1,9 @@
+.NavBar {
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    height: 200px;
+    list-style-type: none;
+    float: left;
+    padding: 8px;
+  }
