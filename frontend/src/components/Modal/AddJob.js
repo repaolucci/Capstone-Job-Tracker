@@ -53,64 +53,111 @@ export const AddJob = ({ setIsOpen }) => {
           <div className={styles.modalHeader}>
             <h1>Add Job</h1>
           </div>
-          <input
-            type="text"
-            value={title}
-            placeholder="Enter title here"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter company here"
-            value={companyName}
-            onChange={(e) => setCompany(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter job type here"
-            value={jobType}
-            onChange={(e) => setJobType(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter location here"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter location type here"
-            value={locationType}
-            onChange={(e) => setLocationType(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter date here"
-            value={dateApplied}
-            onChange={(e) => setDate(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter status here"
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter skill here"
-            value={skills}
-            onChange={(e) => setSkill(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Enter contact here"
-            value={contacts}
-            onChange={(e) => setContact(e.target.value)}
-          />
-          <button onClick={addJob}>Add</button>
-          <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
-            Cancel
-          </button>
+
+          <div className={styles.modalContent}>
+            <label className={styles.label} for="title">
+              Title
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              name="title"
+              id="title"
+              value={title}
+              placeholder="Enter title here"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+
+            <label className={styles.label} for="title">
+              Company Name
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Enter company here"
+              value={companyName}
+              onChange={(e) => setCompany(e.target.value)}
+            />
+
+            <label className={styles.label} for="title">
+              Job Type
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Enter job type here"
+              value={jobType}
+              onChange={(e) => setJobType(e.target.value)}
+            />
+
+            <label className={styles.label} for="title">
+              Job Location
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Enter location here"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            />
+
+            <label className={styles.label} for="title">
+              Location Type
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Enter location type here"
+              value={locationType}
+              onChange={(e) => setLocationType(e.target.value)}
+            />
+
+            <label className={styles.label} for="title">
+              Date Applied
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Enter date here"
+              value={dateApplied}
+              onChange={(e) => setDate(e.target.value)}
+            />
+
+            <label className={styles.label} for="title">
+              Job Status
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Enter status here"
+              value={status}
+              onChange={(e) => setStatus(e.target.value)}
+            />
+
+            <label className={styles.label} for="title">
+              Skills
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Enter skill here"
+              value={skills}
+              onChange={(e) => setSkill(e.target.value)}
+            />
+
+            <label className={styles.label} for="title">
+              Contacts
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="Enter contact here"
+              value={contacts}
+              onChange={(e) => setContact(e.target.value)}
+            />
+            <button className={styles.addButton} onClick={addJob}>Add</button>
+            <button className={styles.closeButton} onClick={() => setIsOpen(false)}>Cancel</button>
+          </div>
         </div>
       </div>
     </>
