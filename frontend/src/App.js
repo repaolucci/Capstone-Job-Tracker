@@ -9,7 +9,6 @@ import { useState } from "react";
 import Log_in from "./pages/LoginPage";
 import { NavBar } from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AddJob from "./components/Modal/AddJob";
 
 function App() {
   const [jobToEdit, setJobToEdit] = useState();

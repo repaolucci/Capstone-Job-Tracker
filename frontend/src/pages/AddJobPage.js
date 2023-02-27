@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 
-export const AddJobPage = () => {
+export const AddJobPage = ({ setIsOpen }) => {
+    
+
 
     const [title, setTitle] = useState('');
     const [companyName, setCompany] = useState('');
@@ -33,7 +35,9 @@ export const AddJobPage = () => {
     };
 
     return (
+        
         <div>
+            <div onClick={() => setIsOpen(false)} />
             <h1>Add Job</h1>
             <input
                 type="text"

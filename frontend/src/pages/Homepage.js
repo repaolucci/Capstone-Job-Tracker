@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import JobList from '../components/JobList';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import AddJobPage from './AddJobPage';
 
 function HomePage({ setJobToEdit }) {
     const [jobs, setJobs] = useState([]);
     const history = useHistory();
+    const [isOpen, setIsOpen] = useState(false);
 
     const onDelete = async _id => {
         const response = await fetch(`/jobs/${_id}`, { method: 'DELETE' });
@@ -37,6 +39,8 @@ function HomePage({ setJobToEdit }) {
         <>
             <h2>Job Tracker</h2>
             <JobList jobs={jobs} onDelete={onDelete} onEdit={onEdit}></JobList>
+            <button onClick={() => setIsOpen(true)}>Open Modal</button>
+            {isOpen && <AddJobPage setIsOpen={setIsOpen} />}
             <Link to="/add-job">Add a job</Link>
         </>
     );
