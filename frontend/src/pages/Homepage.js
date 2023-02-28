@@ -41,7 +41,7 @@ function HomePage({ setJobToEdit }) {
     <>
       <JobList jobs={jobs} onDelete={onDelete} onEdit={onEdit}></JobList>
       <button className="addJobButton" onClick={() => setIsOpen(true)}>
-        Open Modal
+        Add Job
       </button>
       {isOpen && <AddJob setIsOpen={setIsOpen} />}
     </>
