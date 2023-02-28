@@ -4,11 +4,13 @@ import JobList from "../components/JobList";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import AddJob from "../components/Modal/AddJob";
+import EditJob from "../components/Modal/EditJob";
 
-function HomePage({ setJobToEdit }) {
+function HomePage({ jobToEdit, setJobToEdit }) {
   const [jobs, setJobs] = useState([]);
   const history = useHistory();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isAddJobOpen, setIsAddJobOpen] = useState(false);
+  const [isEditJobOpen, setIsEditJobOpen] = useState(false);
 
   const onDelete = async (_id) => {
     const response = await fetch(`/jobs/${_id}`, { method: "DELETE" });
@@ -24,7 +26,7 @@ function HomePage({ setJobToEdit }) {
 
   const onEdit = (job) => {
     setJobToEdit(job);
-    history.push("/edit-job");
+    setIsEditJobOpen(true);
   };
 
   const loadJobs = async () => {
@@ -40,10 +42,11 @@ function HomePage({ setJobToEdit }) {
   return (
     <>
       <JobList jobs={jobs} onDelete={onDelete} onEdit={onEdit}></JobList>
-      <button className="addJobButton" onClick={() => setIsOpen(true)}>
+      <button className="addJobButton" onClick={() => setIsAddJobOpen(true)}>
         Add Job
       </button>
-      {isOpen && <AddJob setIsOpen={setIsOpen} />}
+      {isAddJobOpen && <AddJob setIsOpen={setIsAddJobOpen} />}
+      {isEditJobOpen && <EditJob jobToEdit={jobToEdit} setIsOpen={setIsEditJobOpen} />}
     </>
   );
 }

@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./pages/Homepage";
 import AddJob from "./components/Modal/AddJob";
-import EditJobPage from "./pages/EditJobPage";
+import EditJob from "./components/Modal/EditJob";
 import SkillsPage from "./pages/SkillsPage";
 import { useState } from "react";
 import Log_in from "./pages/LoginPage";
@@ -21,7 +21,7 @@ function App() {
             <div className="navbar-custom">
               <NavBar />
             </div>
-            <HomePage setJobToEdit={setJobToEdit} />
+            <HomePage jobToEdit={jobToEdit} setJobToEdit={setJobToEdit} />
           </Route>
           <Route path="/add-job">
             <div className="navbar-custom">
@@ -33,7 +33,7 @@ function App() {
             <div className="navbar-custom">
               <NavBar />
             </div>
-            <EditJobPage jobToEdit={jobToEdit} />
+            <EditJob jobToEdit={jobToEdit} />
           </Route>
           <Route path="/skills-page">
             <div className="navbar-custom">
