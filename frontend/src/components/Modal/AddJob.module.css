@@ -25,7 +25,7 @@
 }
 
 .modalHeader {
-  height: 50px;
+  height: 75px;
   background: white;
   overflow: hidden;
   border-top-left-radius: 16px;
@@ -48,18 +48,36 @@
   text-align: center;
 }
 
-h1, .label{
+h1 {
   color: black;
+  margin: 20px;
 }
 
-.input {
+.inputGroup {
+  height: 75px;
   margin-bottom: 10px;
 }
 
-
-.label, .input{
+.jobFormSelect, .jobFormLabel, .jobFormInput{
   display: block;
-  font-size: 12px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;  
+  box-sizing: border-box;
+  color:black;
+}
+
+.jobFormLabel {
+  font-weight: bold;
+}
+
+.jobFormSelect, .jobFormInput {
+  margin-bottom: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 2px;
 }
 
 .addButton, .closeButton {

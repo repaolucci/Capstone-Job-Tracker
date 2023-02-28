@@ -54,110 +54,149 @@ export const AddJob = ({ setIsOpen }) => {
             <h1>Add Job</h1>
           </div>
 
-          <div className={styles.modalContent}>
-            <label className={styles.label} for="title">
-              Title
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              name="title"
-              id="title"
-              value={title}
-              placeholder="Enter title here"
-              onChange={(e) => setTitle(e.target.value)}
-            />
+          <form>
+            <div className={styles.modalContent}>
 
-            <label className={styles.label} for="title">
-              Company Name
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Enter company here"
-              value={companyName}
-              onChange={(e) => setCompany(e.target.value)}
-            />
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="title">
+                  Title
+                </label>
+                <input
+                  className={styles.jobFormInput}
+                  type="text"
+                  name="title"
+                  id="title"
+                  value={title}
+                  placeholder="Enter title here"
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+              </div>
 
-            <label className={styles.label} for="title">
-              Job Type
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Enter job type here"
-              value={jobType}
-              onChange={(e) => setJobType(e.target.value)}
-            />
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="companyName">
+                  Company Name
+                </label>
+                <input
+                  className={styles.jobFormInput}
+                  type="text"
+                  placeholder="Enter company here"
+                  value={companyName}
+                  onChange={(e) => setCompany(e.target.value)}
+                />
+              </div>
 
-            <label className={styles.label} for="title">
-              Job Location
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Enter location here"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-            />
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="jobType">
+                  Job Type
+                </label>
+                <select
+                  className={styles.jobFormSelect}
+                  id="jobType"
+                  name="jobType"
+                  onChange={(e) => setJobType(e.target.value)}
+                >
+                  <option value="Full-Time">Full-Time</option>
+                  <option value="Part-Time">Part-Time</option>
+                  <option value="Internship">Internship</option>
+                </select>
+              </div>
 
-            <label className={styles.label} for="title">
-              Location Type
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Enter location type here"
-              value={locationType}
-              onChange={(e) => setLocationType(e.target.value)}
-            />
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="location">
+                  Job Location
+                </label>
+                <input
+                  className={styles.jobFormInput}
+                  type="text"
+                  placeholder="Enter location here"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                />
+              </div>
 
-            <label className={styles.label} for="title">
-              Date Applied
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Enter date here"
-              value={dateApplied}
-              onChange={(e) => setDate(e.target.value)}
-            />
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="locationType">
+                  Location Type
+                </label>
+                <select
+                  className={styles.jobFormSelect}
+                  id="locationType"
+                  name="locationType"
+                  onChange={(e) => setLocationType(e.target.value)}
+                >
+                  <option value="On-Site">On-Site</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Remote">Remote</option>
+                </select>
+              </div>
 
-            <label className={styles.label} for="title">
-              Job Status
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Enter status here"
-              value={status}
-              onChange={(e) => setStatus(e.target.value)}
-            />
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="dateApplied">
+                  Date Applied
+                </label>
+                <input
+                  className={styles.jobFormInput}
+                  type="text"
+                  placeholder="Enter date here"
+                  value={dateApplied}
+                  onChange={(e) => setDate(e.target.value)}
+                />
+              </div>
 
-            <label className={styles.label} for="title">
-              Skills
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Enter skill here"
-              value={skills}
-              onChange={(e) => setSkill(e.target.value)}
-            />
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="status">
+                  Job Status
+                </label>
+                <select
+                  className={styles.jobFormSelect}
+                  id="locationType"
+                  name="locationType"
+                  onChange={(e) => setStatus(e.target.value)}
+                >
+                  <option value="Interested">Interested</option>
+                  <option value="Applied">Applied</option>
+                  <option value="Interviewed">Interviewed</option>
+                  <option value="Offer">Offer</option>
+                </select>
+              </div>
 
-            <label className={styles.label} for="title">
-              Contacts
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Enter contact here"
-              value={contacts}
-              onChange={(e) => setContact(e.target.value)}
-            />
-            <button className={styles.addButton} onClick={addJob}>Add</button>
-            <button className={styles.closeButton} onClick={() => setIsOpen(false)}>Cancel</button>
-          </div>
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="skills">
+                  Skills
+                </label>
+                <input
+                  className={styles.jobFormInput}
+                  type="text"
+                  placeholder="Enter skill here"
+                  value={skills}
+                  onChange={(e) => setSkill(e.target.value)}
+                />
+              </div>
+
+              <div className={styles.jobFormInputGroup}>
+                <label className={styles.jobFormLabel} for="contacts">
+                  Contacts
+                </label>
+                <input
+                  className={styles.jobFormInput}
+                  type="text"
+                  placeholder="Enter contact here"
+                  value={contacts}
+                  onChange={(e) => setContact(e.target.value)}
+                />
+              </div>
+
+              <button className={styles.addButton} onClick={addJob}>
+                Add
+              </button>
+              <button
+                className={styles.closeButton}
+                onClick={() => setIsOpen(false)}
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </>
