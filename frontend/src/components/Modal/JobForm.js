@@ -39,7 +39,7 @@ export const JobForm = ({ setIsOpen, jobObject, formAction }) => {
             <div className={styles.modalContent}>
               <div className={styles.jobFormInputGroup}>
                 <label className={styles.jobFormLabel} for="title">
-                  Titlecd
+                  Title
                 </label>
                 <input
                   className={styles.jobFormInput}
@@ -73,11 +73,11 @@ export const JobForm = ({ setIsOpen, jobObject, formAction }) => {
                   className={styles.jobFormSelect}
                   id="jobType"
                   name="jobType"
+                  value={jobType}
                   onChange={(e) => setJobType(e.target.value)}
                 >
-                  <option value="Full-Time">
-                    Full-Time
-                  </option>
+                  <option value=""></option>
+                  <option value="Full-Time">Full-Time</option>
                   <option value="Part-Time">Part-Time</option>
                   <option value="Internship">Internship</option>
                 </select>
@@ -106,9 +106,8 @@ export const JobForm = ({ setIsOpen, jobObject, formAction }) => {
                   name="locationType"
                   onChange={(e) => setLocationType(e.target.value)}
                 >
-                  <option value="On-Site">
-                    On-Site
-                  </option>
+                  <option value=""></option>
+                  <option value="On-Site">On-Site</option>
                   <option value="Hybrid">Hybrid</option>
                   <option value="Remote">Remote</option>
                 </select>
@@ -137,9 +136,8 @@ export const JobForm = ({ setIsOpen, jobObject, formAction }) => {
                   name="locationType"
                   onChange={(e) => setStatus(e.target.value)}
                 >
-                  <option value="Interested">
-                    Interested
-                  </option>
+                  <option value=""></option>
+                  <option value="Interested">Interested</option>
                   <option value="Applied">Applied</option>
                   <option value="Interviewed">Interviewed</option>
                   <option value="Offer">Offer</option>
