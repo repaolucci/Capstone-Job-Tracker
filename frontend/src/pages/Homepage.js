@@ -1,14 +1,11 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import JobList from "../components/JobList";
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import AddJob from "../components/Modal/AddJob";
 import EditJob from "../components/Modal/EditJob";
 
 function HomePage({ jobToEdit, setJobToEdit }) {
   const [jobs, setJobs] = useState([]);
-  const history = useHistory();
   const [isAddJobOpen, setIsAddJobOpen] = useState(false);
   const [isEditJobOpen, setIsEditJobOpen] = useState(false);
 

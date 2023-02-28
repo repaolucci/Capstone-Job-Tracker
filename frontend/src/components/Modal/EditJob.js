@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
-import styles from "./JobForm.module.css";
 import JobForm from "./JobForm";
 
 export const EditJob = ({ jobToEdit, setIsOpen }) => {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import JobForm from "./JobForm";
 
 export const AddJob = ({ setIsOpen }) => {
