@@ -6,8 +6,8 @@ function SkillList({ skills }) {
     <table id="skills">
       <thead>
         <tr>
-          <th>Skills Required</th>
-          <th>Skill Frequency</th>
+          <th>Skill</th>
+          <th>Frequency</th>
         </tr>
       </thead>
       <tbody>
