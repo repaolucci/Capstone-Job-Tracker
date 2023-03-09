@@ -2,7 +2,7 @@ import React, { useState } from "react";
 //import { useHistory } from "react-router-dom";
 import styles from "./JobForm.module.css";
 
-export const JobForm = ({ setIsOpen, jobObject, formAction }) => {
+export const JobForm = ({ setIsOpen, jobObject, formAction, header }) => {
   const [title, setTitle] = useState(jobObject.title);
   const [companyName, setCompany] = useState(jobObject.companyName);
   const [jobType, setJobType] = useState(jobObject.jobType);
@@ -34,7 +34,7 @@ export const JobForm = ({ setIsOpen, jobObject, formAction }) => {
       <div className={styles.centered}>
         <div className={styles.modal}>
           <div className={styles.modalHeader}></div>
-          <h1>Header</h1>
+          <h1>{header}</h1>
           <form>
             <div className={styles.modalContent}>
               <div className={styles.jobFormInputGroup}>

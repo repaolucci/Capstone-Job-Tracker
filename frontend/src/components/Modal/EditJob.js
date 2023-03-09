@@ -27,6 +27,7 @@ export const EditJob = ({ jobToEdit, setIsOpen }) => {
         setIsOpen={setIsOpen}
         jobObject={jobToEdit}
         formAction={editJob}
+        header="Edit Job"
       />
     </>
   );
